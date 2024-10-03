@@ -6,3 +6,4 @@ function main() {
     var firstString = (0, readline_sync_1.question)("Enter first number: \n");
     console.log(firstString);
 }
+main();
