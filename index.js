@@ -1,4 +1,3 @@
-"use strict";
 var _a;
 console.log(5, 4, "hello world");
 function add(a, b) {
