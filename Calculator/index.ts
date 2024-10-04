@@ -5,21 +5,20 @@ export function main(): void {
   const operator: string = question("Enter operator: \n");
   const secondString: string = question("Enter second number: \n");
 
-  const firstNum = isNumber(firstString);
-  console.log(firstNum);
+  const op = isOperator(operator);
+  console.log(op);
 }
 
 function isOperator(operator: string): boolean {
-  return operator==="+"
   switch (operator) {
-  case "+";
-  case "-";
-  case "*";
-  case "/";
-  return true; 
-
-  
-}
+    case "+":
+    case "-":
+    case "*":
+    case "/":
+      return true;
+    default:
+      return false;
+  }
 }
 
 function isNumber(str: string): boolean {

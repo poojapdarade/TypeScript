@@ -6,12 +6,23 @@ function main() {
     var firstString = (0, readline_sync_1.question)("Enter first number: \n");
     var operator = (0, readline_sync_1.question)("Enter operator: \n");
     var secondString = (0, readline_sync_1.question)("Enter second number: \n");
-    var firstNum = isNumber(firstString);
-    console.log(firstNum);
+    var op = isOperator(operator);
+    console.log(op);
+}
+function isOperator(operator) {
+    switch (operator) {
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+            return true;
+        default:
+            return false;
+    }
 }
 function isNumber(str) {
     var mayBeNumber = parseInt(str);
-    var isNum = Boolean(!isNaN(mayBeNumber));
+    var isNum = !isNaN(mayBeNumber);
     return isNum;
 }
 main();
