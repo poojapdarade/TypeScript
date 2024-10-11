@@ -6,7 +6,7 @@ import Item from "./Item/item";
 
 import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
 
-import { Wrapper } from "./App.styles";
+import { Wrapper,StyledButton } from "./App.styles";
 
 export type CartItemType={
   id:number;
@@ -44,7 +44,9 @@ if(error) return <div>Something is wrong...!</div>;
         Cart Goes Here!
       </Drawer>
 
-      
+        <StyledButton onClick={()=>setCartOpen(true)}>
+          
+        </StyledButton>
 
       <Grid container spacing ={3}>
         {data?.map(item=>(
